@@ -11,12 +11,12 @@ const io = new Server(server, {
 
 app.use(cors());
 app.use(express.json());
-const logger = require('./logger');
+// const logger = require('./logger');
 
-app.use((err, req, res, next) => {
-    logger.error('Server error:', { message: err.message, stack: err.stack });
-    res.status(500).json({ message: 'Internal Server Error' });
-});
+// app.use((err, req, res, next) => {
+//     logger.error('Server error:', { message: err.message, stack: err.stack });
+//     res.status(500).json({ message: 'Internal Server Error' });
+// });
 
 let gameState = initializeGameState();
 
